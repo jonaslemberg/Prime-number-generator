@@ -2,17 +2,14 @@ import math
 
 def isnumeric(i): 
 
-    #checks if the input is numeric
     return all(char in "0123456789.-+" for char in i) 
 
-def output(primes, size):
+def output(primes, size): 
     
-    # prints the prime numbers in ten columns
+    # prints the list of prime numbers in a 10 column table
     
     row_count = 0
     r = ""
-    
-    #finds prime numbers and add them to a list
     
     for x in range(0, len(primes)):
         size_p = len(str(primes[x]))
@@ -65,6 +62,8 @@ def main():
     diff = abs(y - x)
     primes = []
     
+    #finds prime numbers and add them to a list
+    
     for i in range (0, diff+1):
         num = x + (i*add)
         div = 2
@@ -76,6 +75,6 @@ def main():
                 primes.append(num)
             div += 1
         
-    output(primes, size) #prints the table of numbers
+    output(primes, size) #prints the list of prime numbers
     
 main()
